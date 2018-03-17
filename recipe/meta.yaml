@@ -1,12 +1,15 @@
-{% set version = "0.1.0" %}
+{% set name = "tiledb" %}
+{% set version = "0.1.1" %}
+{% set sha256 = "e6734e746d7ce13f826bdedf77be7fec8c960098fd2f2152608f6134e8957a42" %}
 
 package:
   name: tiledb-py
   version: {{ version }}
 
 source:
-  url: https://github.com/TileDB-Inc/TileDB-Py/archive/{{ version }}.tar.gz
-  sha256: 8223e468f6c01bd82be4fdfee2a3b58af205b6ddd0f812fc4000b983304c8f66
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
   number: 0
@@ -17,7 +20,8 @@ requirements:
   build:
     - toolchain
     - python
-    - setuptools
+    - setuptools >18.0
+    - setuptools_scm >1.5.4
     - cython
     - numpy 1.8.*  # [not (win and (py35 or py36))]
     - tiledb 1.2.*
