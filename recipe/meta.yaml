@@ -1,6 +1,6 @@
 {% set name = "tiledb" %}
-{% set version = "0.1.1" %}
-{% set sha256 = "e6734e746d7ce13f826bdedf77be7fec8c960098fd2f2152608f6134e8957a42" %}
+{% set version = "0.2.1" %}
+{% set sha256 = "c77bbca6f8560f9e384dd0fbc3e8427e2b4cb77b515a3a6b3e03a72360ac09f7" %}
 
 package:
   name: tiledb-py
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win or py2k]
   script: python setup.py install --tiledb="$PREFIX" --single-version-externally-managed --record record.txt
 
