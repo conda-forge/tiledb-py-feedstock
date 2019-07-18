@@ -9,7 +9,7 @@ Feedstock license: BSD 3-Clause
 
 Summary: Python interface to the TileDB sparse and dense multi-dimensional array storage manager
 
-TileDB-Py is the python interface to the TielDB array storage manager.
+TileDB-Py is the python interface to the TileDB array storage manager.
 TileDB  is an efficient multi-dimensional array management system which introduces
 a novel on-disk format that can store dense and sparse array data with
 support for fast reads and updates and reads. It features excellent compression, and an efficient
