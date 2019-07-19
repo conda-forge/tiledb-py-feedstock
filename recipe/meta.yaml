@@ -41,7 +41,7 @@ test:
     - tiledb
   commands:
     - python -c "import tiledb; tiledb.libtiledb.version()"
-    - python -c "import tiledb; assert tiledb.VCF().supports('s3')"
+    - python -c "import tiledb; assert tiledb.VFS().supports('s3')"
 
 about:
   home: http://tiledb.io
