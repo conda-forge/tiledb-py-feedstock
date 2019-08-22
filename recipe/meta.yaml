@@ -14,7 +14,7 @@ source:
     - 0001-Patch-0.4.3-runtime_library_dirs-on-windows.patch  # [win]
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win32]
   skip: True  # [win and py2k]
   features:  # [win]
