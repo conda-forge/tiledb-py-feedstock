@@ -15,7 +15,7 @@ pin_run_as_build:
 python:
 - '3.6'
 tiledb:
-- 1.6.0
+- 1.6.2
 zip_keys:
 - - python
   - cxx_compiler
