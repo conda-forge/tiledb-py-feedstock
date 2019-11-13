@@ -1,6 +1,6 @@
 {% set name = "tiledb" %}
-{% set version = "0.4.4" %}
-{% set sha256 = "ec8c9e07804af34e4db0a23503d0f58635b05e71252aff4a528560bebbb5bee4" %}
+{% set version = "0.5.0" %}
+{% set sha256 = "d76226bef676275b310ba48192f82f24b85160456ddf808d8fd4db5c11414931" %}
 
 package:
   name: tiledb-py
@@ -28,13 +28,13 @@ requirements:
     - setuptools_scm
     - cython
     - numpy
-    - tiledb 1.6.*
+    - tiledb 1.7.*
 
   run:
     - python
     - setuptools
     - {{ pin_compatible('numpy') }}
-    - tiledb 1.6.*
+    - tiledb 1.7.*
 
 test:
   imports:
