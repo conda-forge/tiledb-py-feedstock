@@ -19,7 +19,7 @@ pin_run_as_build:
 python:
 - 3.8.* *_cpython
 tiledb:
-- '1.7'
+- '2.0'
 zip_keys:
 - - numpy
   - python
