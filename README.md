@@ -5,9 +5,13 @@ Home: http://tiledb.io
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tiledb-py-feedstock/blob/master/LICENSE.txt)
 
 Summary: Python interface to the TileDB sparse and dense multi-dimensional array storage manager
+
+Development: https://github.com/TileDB-Inc/TileDB-Py
+
+Documentation: https://api-reference.tiledb.io/python-api.html
 
 TileDB-Py is the python interface to the TileDB array storage manager.
 TileDB  is an efficient multi-dimensional array management system which introduces

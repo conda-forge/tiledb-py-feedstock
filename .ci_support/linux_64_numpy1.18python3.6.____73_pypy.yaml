@@ -21,7 +21,7 @@ python:
 target_platform:
 - linux-64
 tiledb:
-- '2.0'
+- '2.1'
 zip_keys:
 - - numpy
   - python
