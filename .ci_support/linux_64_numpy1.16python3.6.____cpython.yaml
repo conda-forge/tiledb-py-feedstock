@@ -25,5 +25,7 @@ target_platform:
 tiledb:
 - '2.1'
 zip_keys:
+- - cdt_name
+  - docker_image
 - - python
   - numpy
