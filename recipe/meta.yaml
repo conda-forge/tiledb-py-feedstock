@@ -49,7 +49,7 @@ test:
   commands:
     - python -c "import tiledb; tiledb.libtiledb.version()"
     - python -c "import tiledb; assert tiledb.VFS().supports('s3')"
-    - pytest -s -v --ignore-glob='test_examples.py'
+    - pytest -s -v --ignore-glob='*_examples.py'
 
 about:
   home: http://tiledb.io
