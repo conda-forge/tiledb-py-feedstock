@@ -37,11 +37,18 @@ requirements:
     - tiledb 2.1.*
 
 test:
+  requires:
+    - pytest
+    - pyarrow
+    - pandas
   imports:
     - tiledb
+  source_files:
+    - "tiledb/tests/"
   commands:
     - python -c "import tiledb; tiledb.libtiledb.version()"
     - python -c "import tiledb; assert tiledb.VFS().supports('s3')"
+    - pytest -s -v --ignore-glob='test_examples.py'
 
 about:
   home: http://tiledb.io
