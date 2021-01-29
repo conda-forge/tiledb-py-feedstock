@@ -36,6 +36,7 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - tiledb 2.1.*
 
+{% if python_impl != 'pypy' %}
 test:
   requires:
     - pytest
@@ -50,6 +51,7 @@ test:
     - python -c "import tiledb; tiledb.libtiledb.version()"
     - python -c "import tiledb; assert tiledb.VFS().supports('s3')"
     - pytest -s -v --ignore-glob='*_examples.py'
+{% endif %}
 
 about:
   home: http://tiledb.io
