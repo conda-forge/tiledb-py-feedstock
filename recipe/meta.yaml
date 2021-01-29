@@ -41,6 +41,7 @@ test:
     - pytest
     - pyarrow
     - pandas
+    - psutil # [not win]
   imports:
     - tiledb
   source_files:
