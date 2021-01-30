@@ -42,7 +42,7 @@ test:
     - pytest
     - pyarrow
     - pandas
-    - psutil # [not win]
+    - psutil  # [not win]
   imports:
     - tiledb
   source_files:
