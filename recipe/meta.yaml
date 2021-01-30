@@ -1,6 +1,6 @@
 {% set name = "tiledb" %}
-{% set version = "0.7.7" %}
-{% set sha256 = "a77f6e9cf9114f8efe9193a779fe5bb84f10ec843d07cdc0401330d008c7c9ed" %}
+{% set version = "0.8.0" %}
+{% set sha256 = "1bf63241ddb4c80ef866302960239a5b2fc6891a6aee9cc232791559d6d205fd" %}
 
 package:
   name: tiledb-py
@@ -46,7 +46,7 @@ test:
   imports:
     - tiledb
   source_files:
-    - "tiledb/tests/"
+    - tiledb/tests/
   commands:
     - python -c "import tiledb; tiledb.libtiledb.version()"
     - python -c "import tiledb; assert tiledb.VFS().supports('s3')"
