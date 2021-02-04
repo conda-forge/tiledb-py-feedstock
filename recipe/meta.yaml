@@ -10,6 +10,8 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    - 0001-Loosen-NumPy-pin-for-conda-1.16.6-is-latest.patch # remove this in 0.8.3
 
 build:
   number: 0
@@ -17,7 +19,6 @@ build:
   skip: true  # [win and py2k]
   features:   # [win]
     - vc14  # [win]
-
 requirements:
   build:
     - {{ compiler('cxx') }}
