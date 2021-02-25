@@ -1,6 +1,6 @@
 {% set name = "tiledb" %}
-{% set version = "0.8.3" %}
-{% set sha256 = "b4513e524cea5fac5d7007b706cee3e994974c3460a03c0aef8987130a367912" %}
+{% set version = "0.8.4" %}
+{% set sha256 = "024f7c85a31849bed8040c831bb4ecf86d9cbd3f676051a1356a4391665d093d" %}
 
 package:
   name: tiledb-py
@@ -10,8 +10,6 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - 0001-Loosen-NumPy-pin-for-conda-1.16.6-is-latest.patch # remove this in 0.8.3
 
 build:
   number: 0
