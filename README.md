@@ -250,6 +250,7 @@ Feedstock Maintainers
 =====================
 
 * [@ihnorton](https://github.com/ihnorton/)
+* [@nguyenv](https://github.com/nguyenv/)
 * [@shelnutt2](https://github.com/shelnutt2/)
 * [@stavrospapadopoulos](https://github.com/stavrospapadopoulos/)
 
