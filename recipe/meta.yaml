@@ -35,6 +35,7 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
+    - dataclasses  # [py == 36]
     - tiledb 2.2.*
 
 {% if python_impl != 'pypy' %}
@@ -43,6 +44,7 @@ test:
     - pytest
     - pyarrow
     - pandas
+    - dataclasses  # [py == 36]
     - psutil  # [not win]
   imports:
     - tiledb
