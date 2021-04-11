@@ -42,6 +42,7 @@ requirements:
 {% if python_impl != 'pypy' %}
 test:
   requires:
+    - hypothesis
     - pytest
     - pyarrow
     - pandas
