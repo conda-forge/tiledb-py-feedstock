@@ -1,6 +1,6 @@
 {% set name = "tiledb" %}
-{% set version = "0.8.7" %}
-{% set sha256 = "79f9371cfb9d101c70cf20624f851d0679caf9ca8b527106fad93afc4d38ce94" %}
+{% set version = "0.8.8" %}
+{% set sha256 = "866ceeac1b4e7cef4e492a5e5b22461d07df9ffdd455d7e145f2ac1808521bb8" %}
 
 package:
   name: tiledb-py
@@ -16,7 +16,7 @@ source:
     - 0003-0.8.7-test-typo.patch
     - 0004-0.8.7-skip-dask-win.patch
 build:
-  number: 2
+  number: 0
   skip: true  # [win32]
   skip: true  # [win and py2k]
   features:   # [win]
