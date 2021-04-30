@@ -16,7 +16,7 @@ source:
     - 0003-0.8.7-test-typo.patch
     - 0004-0.8.7-skip-dask-win.patch
 build:
-  number: 1
+  number: 2
   skip: true  # [win32]
   skip: true  # [win and py2k]
   features:   # [win]
