@@ -12,9 +12,7 @@ source:
   sha256: {{ sha256 }}
   patches:
     - 0001-numpy-version.patch # remove this when numpy pin flexibility is resolved
-    - 0002-columninfo-test.patch
-    - 0003-0.8.7-test-typo.patch
-    - 0004-0.8.7-skip-dask-win.patch
+
 build:
   number: 0
   skip: true  # [win32]
