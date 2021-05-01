@@ -47,7 +47,7 @@ test:
     - pyarrow
     - pandas
     - dataclasses  # [py == 36]
-    - psutil  # [not win]
+    - psutil
   imports:
     - tiledb
   source_files:
