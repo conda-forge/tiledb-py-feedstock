@@ -37,6 +37,7 @@ requirements:
     - python
     - {{ pin_compatible('numpy') }}
     - dataclasses  # [py == 36]
+    - contextvars  # [py == 36]
     - tiledb 2.2.*
 
 {% if python_impl != 'pypy' %}
