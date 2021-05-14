@@ -1,6 +1,6 @@
 {% set name = "tiledb" %}
-{% set version = "0.8.8" %}
-{% set sha256 = "866ceeac1b4e7cef4e492a5e5b22461d07df9ffdd455d7e145f2ac1808521bb8" %}
+{% set version = "0.8.9" %}
+{% set sha256 = "84f6ac2b732c968828c75b9d2db9168feac51f57cc4ca1888bab28ee4da1c59c" %}
 
 package:
   name: tiledb-py
@@ -14,7 +14,7 @@ source:
     - 0001-numpy-version.patch # remove this when numpy pin flexibility is resolved
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win32]
   skip: true  # [win and py2k]
   features:   # [win]
