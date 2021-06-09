@@ -1,0 +1,16 @@
+diff --git a/setup.py b/setup.py
+index 46c83c2..b28b4d0 100644
+--- a/setup.py
++++ b/setup.py
+@@ -489,9 +489,7 @@ def cmake_available():
+ def setup_requires():
+     req = [
+         "cython>=0.27",
+-        "numpy==1.16.* ; python_version < '3.9' and 'arm' not in platform_machine",
+-        "numpy ; python_version >= '3.9' and 'arm' not in platform_machine",
+-        "numpy ; 'arm' in platform_machine",
++        "numpy",
+         "setuptools>=18.0",
+         "setuptools_scm>=1.5.4",
+         "wheel>=0.30",
+  
