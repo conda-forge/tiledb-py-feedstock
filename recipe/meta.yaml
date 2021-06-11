@@ -14,7 +14,7 @@ source:
     - 0001-numpy-version.patch # remove this when numpy pin flexibility is resolved
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win32]
   skip: true  # [win and py2k]
   features:   # [win]
