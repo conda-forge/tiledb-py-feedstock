@@ -46,8 +46,8 @@ requirements:
 test:
   requires:
     - hypothesis
+    - pyarrow
     - pytest
-    - pyarrow 3.* # pin for 0.8.8 due to segfault w/ arrow 4.0
     - pandas
     - dataclasses  # [py == 36]
     - psutil
@@ -58,7 +58,7 @@ test:
   commands:
     - python -c "import tiledb; tiledb.libtiledb.version()"
     - python -c "import tiledb; assert tiledb.VFS().supports('s3')"
-    #- pytest -s -v --ignore-glob='*_examples.py' --ignore-glob='*_dask.py'
+    - pytest -s -v --ignore-glob='*_examples.py' --ignore-glob='*_dask.py'
 {% endif %}
 
 about:
