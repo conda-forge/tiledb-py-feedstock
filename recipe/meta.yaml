@@ -1,6 +1,6 @@
 {% set name = "tiledb" %}
-{% set version = "0.9.1" %}
-{% set sha256 = "6aee0240486ab4a193b58f378004994c4a0035d71e70422228dae8d345caaebb" %}
+{% set version = "0.9.2" %}
+{% set sha256 = "59464dd9ac6dc514f7062bb8060a05829efd8b427b6961dd3fb078cb652bf75a" %}
 
 package:
   name: tiledb-py
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 3
+  number: 0
   skip: true  # [win32]
   skip: true  # [win and py2k]
   features:   # [win]
@@ -46,8 +46,8 @@ requirements:
 test:
   requires:
     - hypothesis
+    - pyarrow
     - pytest
-    - pyarrow 3.* # pin for 0.8.8 due to segfault w/ arrow 4.0
     - pandas
     - dataclasses  # [py == 36]
     - psutil
@@ -58,7 +58,7 @@ test:
   commands:
     - python -c "import tiledb; tiledb.libtiledb.version()"
     - python -c "import tiledb; assert tiledb.VFS().supports('s3')"
-    #- pytest -s -v --ignore-glob='*_examples.py' --ignore-glob='*_dask.py'
+    - pytest -s -v --ignore-glob='*_examples.py' --ignore-glob='*_dask.py'
 {% endif %}
 
 about:
