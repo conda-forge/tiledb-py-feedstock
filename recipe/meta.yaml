@@ -15,8 +15,6 @@ build:
   number: 1
   skip: true  # [win32]
   skip: true  # [win and py2k]
-  features:   # [win]
-    - vc14  # [win]
 requirements:
   build:
     - {{ compiler('cxx') }}
