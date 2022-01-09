@@ -42,7 +42,7 @@ requirements:
     - contextvars  # [py == 36]
     - tiledb
 
-{% if python_impl != 'pypy' %}
+{% if python_impl is defined and python_impl != 'pypy' %}
 test:
   requires:
     - hypothesis
