@@ -27,7 +27,7 @@ python_impl:
 target_platform:
 - linux-64
 tiledb:
-- '2.5'
+- '2.6'
 zip_keys:
 - - python
   - numpy
