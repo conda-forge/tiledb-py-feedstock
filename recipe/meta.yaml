@@ -1,14 +1,15 @@
 {% set name = "tiledb" %}
-{% set version = "0.11.5" %}
-{% set sha256 = "f5feb091de6dd685aad876da66c8a833eabfa0dd6c8320a48d30f9d8b30619e5" %}
+{% set version = "0.12.0rc0" %}
+{% set sha256 = "29abe5a2c4093ca3ebb726b94ba7b5f6ad6ce50679e7d15a78d5abc3504c8cb8" %}
 
 package:
   name: tiledb-py
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  #fn: {{ name }}-{{ version }}.tar.gz
+  #url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://github.com/TileDB-Inc/TileDB-Py/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
