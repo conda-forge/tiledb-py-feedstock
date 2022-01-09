@@ -1,5 +1,9 @@
+BUILD:
+- aarch64-conda_cos7-linux-gnu
+cdt_arch:
+- aarch64
 cdt_name:
-- cos6
+- cos7
 channel_sources:
 - conda-forge
 - conda-forge/label/tiledb_rc
@@ -13,7 +17,7 @@ cxx_compiler_version:
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 numpy:
-- '1.18'
+- '1.19'
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -21,11 +25,14 @@ pin_run_as_build:
   tiledb:
     max_pin: x.x
 python:
-- 3.8.* *_cpython
+- 3.9.* *_cpython
+python_impl:
+- cpython
 target_platform:
-- linux-64
+- linux-aarch64
 tiledb:
 - '2.5'
 zip_keys:
 - - python
   - numpy
+  - python_impl

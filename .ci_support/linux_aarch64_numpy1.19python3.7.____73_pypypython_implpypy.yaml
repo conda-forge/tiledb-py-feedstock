@@ -17,7 +17,7 @@ cxx_compiler_version:
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 numpy:
-- '1.18'
+- '1.19'
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -25,7 +25,9 @@ pin_run_as_build:
   tiledb:
     max_pin: x.x
 python:
-- 3.8.* *_cpython
+- 3.7.* *_73_pypy
+python_impl:
+- pypy
 target_platform:
 - linux-aarch64
 tiledb:
@@ -33,3 +35,4 @@ tiledb:
 zip_keys:
 - - python
   - numpy
+  - python_impl
