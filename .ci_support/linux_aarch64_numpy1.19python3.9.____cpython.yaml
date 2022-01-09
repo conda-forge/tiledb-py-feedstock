@@ -5,7 +5,9 @@ cdt_arch:
 cdt_name:
 - cos7
 channel_sources:
-- conda-forge/label/tiledb_rc,conda-forge,defaults
+- conda-forge
+- conda-forge/label/tiledb_rc
+- defaults
 channel_targets:
 - conda-forge tiledb-py_rc
 cxx_compiler:
@@ -23,9 +25,7 @@ pin_run_as_build:
   tiledb:
     max_pin: x.x
 python:
-- 3.7.* *_73_pypy
-python_impl:
-- pypy
+- 3.9.* *_cpython
 target_platform:
 - linux-aarch64
 tiledb:
@@ -33,4 +33,3 @@ tiledb:
 zip_keys:
 - - python
   - numpy
-  - python_impl

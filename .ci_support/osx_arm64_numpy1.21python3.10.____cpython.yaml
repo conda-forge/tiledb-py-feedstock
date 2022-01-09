@@ -1,7 +1,9 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '11.0'
 channel_sources:
-- conda-forge/label/tiledb_rc,conda-forge,defaults
+- conda-forge
+- conda-forge/label/tiledb_rc
+- defaults
 channel_targets:
 - conda-forge tiledb-py_rc
 cxx_compiler:
@@ -20,8 +22,6 @@ pin_run_as_build:
     max_pin: x.x
 python:
 - 3.10.* *_cpython
-python_impl:
-- cpython
 target_platform:
 - osx-arm64
 tiledb:
@@ -29,4 +29,3 @@ tiledb:
 zip_keys:
 - - python
   - numpy
-  - python_impl
