@@ -3,7 +3,7 @@ channel_sources:
 - conda-forge/label/tiledb_rc
 - defaults
 channel_targets:
-- conda-forge tiledb-py_rc
+- conda-forge tiledb_rc
 cxx_compiler:
 - vs2017
 numpy:
