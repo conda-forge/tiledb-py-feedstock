@@ -8,3 +8,5 @@ channel_sources:
   - defaults
 channel_targets:
   - conda-forge tiledb_rc
+tiledb:
+  - '2.6'
