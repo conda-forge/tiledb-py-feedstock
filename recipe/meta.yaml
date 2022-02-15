@@ -32,15 +32,15 @@ requirements:
     - cython
     - numpy
     - pybind11
-    - tiledb 2.6.*
+    - tiledb
   run:
     - python
     - {{ pin_compatible('numpy') }}
     - dataclasses  # [py == 36]
     - contextvars  # [py == 36]
-    - tiledb 2.6.*
+    - tiledb
 
-{% if python_impl != 'pypy' %}
+{% if python_impl is defined and python_impl != 'pypy' %}
 test:
   requires:
     - hypothesis
