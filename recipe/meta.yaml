@@ -1,5 +1,5 @@
 {% set name = "tiledb" %}
-{% set version = "0.12.2" %}
+{% set version = "0.13.0rc0" %}
 {% set sha256 = "2851740715dc5323d7e3b79a4c8c2a851fecae103c58e251505dae09f93769f2" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-0.12.2.tar.gz
   sha256: {{ sha256 }}
 
 build:
