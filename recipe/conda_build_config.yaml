@@ -4,5 +4,7 @@ MACOSX_DEPLOYMENT_TARGET:  # [osx and x86_64]
   - "10.14"                # [osx and x86_64]
 channel_sources:
   - conda-forge/label/tiledb_rc,conda-forge,defaults
+channel_targets:
+  - conda-forge tiledb_rc
 tiledb:
   - "2.7.0rc0"
