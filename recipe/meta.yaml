@@ -1,6 +1,6 @@
 {% set name = "tiledb" %}
-{% set version = "0.14.3" %}
-{% set sha256 = "3df63e4df7bf90d0af1b007fed21ebd9add22220416f4c604a16ec3bafe43427" %}
+{% set version = "0.14.4" %}
+{% set sha256 = "7695e5ea35e89e1ac2ca260b8371c8bcc7f1e3945c3369953f51e605f663fbb8" %}
 
 package:
   name: tiledb-py
