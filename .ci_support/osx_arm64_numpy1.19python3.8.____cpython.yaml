@@ -25,7 +25,7 @@ python_impl:
 target_platform:
 - osx-arm64
 tiledb:
-- '2.8'
+- '2.6'
 zip_keys:
 - - python
   - numpy
