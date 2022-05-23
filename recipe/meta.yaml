@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win32]
   skip: true  # [win and py2k]
 requirements:
@@ -38,6 +38,7 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - dataclasses  # [py == 36]
     - contextvars  # [py == 36]
+    - packaging
     - tiledb 2.8.*
 
 {% if python_impl != 'pypy' %}
