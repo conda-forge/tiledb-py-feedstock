@@ -1,0 +1,34 @@
+From f7c1d48fc624f445f89999bab7214e4456922cac Mon Sep 17 00:00:00 2001
+From: Vivian Nguyen <vivian@tiledb.com>
+Date: Tue, 9 Aug 2022 17:43:10 -0500
+Subject: [PATCH] Modify `test_init_config` To Use `capfd`
+
+---
+ tiledb/tests/test_libtiledb.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/tiledb/tests/test_libtiledb.py b/tiledb/tests/test_libtiledb.py
+index 4db6ec9..7e82a74 100644
+--- a/tiledb/tests/test_libtiledb.py
++++ b/tiledb/tests/test_libtiledb.py
+@@ -3946,7 +3946,7 @@ def init_test_helper(cfg=None):
+     print(int(concurrency_level))
+ 
+ 
+-class ContextTest(unittest.TestCase):
++class ContextTest(DiskTestCase):
+     def test_default_ctx(self):
+         ctx = tiledb.default_ctx()
+         self.assertIsInstance(ctx, tiledb.Ctx)
+@@ -4002,7 +4002,7 @@ class ContextTest(unittest.TestCase):
+     @pytest.mark.skipif(
+         "pytest.tiledb_vfs == 's3'", reason="Test not yet supported with S3"
+     )
+-    def test_init_config(self):
++    def test_init_config(self, capfd):
+         self.assertEqual(
+             int(tiledb.default_ctx().config()["sm.io_concurrency_level"]),
+             init_test_wrapper(),
+-- 
+2.25.1
+
