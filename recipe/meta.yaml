@@ -11,7 +11,7 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
-      - 0001-Do-Not-Error-Out-For-Output-On-test_init_config.patch
+      - 0001-Modify-test_init_config-To-Use-capfd.patch
 
 build:
   number: 0
