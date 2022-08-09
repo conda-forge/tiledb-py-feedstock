@@ -1,6 +1,6 @@
 {% set name = "tiledb" %}
-{% set version = "0.16.5" %}
-{% set sha256 = "38ef9ae6f9a356d432a82f9705ca6aa49e7b0db74cb8fa861a93123d76361e18" %}
+{% set version = "0.17.0" %}
+{% set sha256 = "22b240ae23761da20145f86481034afefead5507e122541fe86eafdaa667da2f" %}
 
 package:
   name: tiledb-py
@@ -10,6 +10,8 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+      - 0001-Modify-test_init_config-To-Use-capfd.patch
 
 build:
   number: 0
@@ -32,14 +34,14 @@ requirements:
     - cython
     - numpy
     - pybind11
-    - tiledb 2.10.*
+    - tiledb 2.11.*
   run:
     - python
     - {{ pin_compatible('numpy') }}
     - dataclasses  # [py == 36]
     - contextvars  # [py == 36]
     - packaging
-    - tiledb 2.10.*
+    - tiledb 2.11.*
 
 {% if python_impl != 'pypy' %}
 test:
