@@ -1,0 +1,25 @@
+From b61c220b72e95b55b0b17793b0ca1c67ef57abd0 Mon Sep 17 00:00:00 2001
+From: Vivian Nguyen <vivian@tiledb.com>
+Date: Tue, 9 Aug 2022 16:51:25 -0500
+Subject: [PATCH] Do Not Error Out For Output On `test_init_config`
+
+---
+ tiledb/tests/test_libtiledb.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/tiledb/tests/test_libtiledb.py b/tiledb/tests/test_libtiledb.py
+index 84196bf..1e50d66 100644
+--- a/tiledb/tests/test_libtiledb.py
++++ b/tiledb/tests/test_libtiledb.py
+@@ -4010,7 +4010,7 @@ class ContextTest(unittest.TestCase):
+     @pytest.mark.skipif(
+         "pytest.tiledb_vfs == 's3'", reason="Test not yet supported with S3"
+     )
+-    def test_init_config(self):
++    def test_init_config(self, capfd):
+         self.assertEqual(
+             int(tiledb.default_ctx().config()["sm.io_concurrency_level"]),
+             init_test_wrapper(),
+-- 
+2.25.1
+
