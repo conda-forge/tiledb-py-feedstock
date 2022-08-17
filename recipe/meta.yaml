@@ -1,6 +1,6 @@
 {% set name = "tiledb" %}
-{% set version = "0.17.0" %}
-{% set sha256 = "22b240ae23761da20145f86481034afefead5507e122541fe86eafdaa667da2f" %}
+{% set version = "0.17.1" %}
+{% set sha256 = "b6749c5785a5e4a407356633ecaf447d2dcae46f0320a693a280d525dbd61fdd" %}
 
 package:
   name: tiledb-py
@@ -10,8 +10,6 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-      - 0001-Modify-test_init_config-To-Use-capfd.patch
 
 build:
   number: 0
