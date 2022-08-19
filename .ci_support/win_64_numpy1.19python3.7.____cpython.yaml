@@ -19,7 +19,7 @@ python_impl:
 target_platform:
 - win-64
 tiledb:
-- '2.10'
+- '2.11'
 zip_keys:
 - - python
   - numpy
