@@ -6,5 +6,3 @@ channel_sources:
   - conda-forge
 channel_priority:
   - strict
-tiledb:
-  - "2.10"
