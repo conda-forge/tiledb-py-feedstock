@@ -32,14 +32,14 @@ requirements:
     - cython
     - numpy
     - pybind11
-    - tiledb 2.11.*
+    - tiledb 2.12.*
   run:
     - python
     - {{ pin_compatible('numpy') }}
     - dataclasses  # [py == 36]
     - contextvars  # [py == 36]
     - packaging
-    - tiledb 2.11.*
+    - tiledb 2.12.*
 
 {% if python_impl != 'pypy' %}
 test:
