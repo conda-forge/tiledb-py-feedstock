@@ -1,6 +1,6 @@
 {% set name = "tiledb" %}
-{% set version = "0.22.3" %}
-{% set sha256 = "e916b5712394eb078464726578f4ff105322856a83a313f85593eb29045a8ebd" %}
+{% set version = "0.23.0" %}
+{% set sha256 = "3e7f136f4f5c94f8729610cb798a293e5e753dbd0691fc7f519bb0e055337fed" %}
 
 package:
   name: tiledb-py
@@ -32,7 +32,7 @@ requirements:
     - cython <3.0
     - numpy
     - pybind11 <2.11
-    - tiledb >=2.16.0,<2.17
+    - tiledb >=2.17.0,<2.18
   run:
     - python
     - {{ pin_compatible('numpy') }}
@@ -56,7 +56,7 @@ test:
   commands:
     - python -c "import tiledb; tiledb.libtiledb.version()"
     - python -c "import tiledb; assert tiledb.VFS().supports('s3')"
-    - pytest -s -v --ignore-glob='*_examples.py' --ignore-glob='*_dask.py'
+    - pytest -v --ignore-glob='*_examples.py' --ignore-glob='*_dask.py'
 {% endif %}
 
 about:
