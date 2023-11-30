@@ -36,8 +36,6 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - dataclasses  # [py == 36]
-    - contextvars  # [py == 36]
     - packaging
 
 {% if python_impl != 'pypy' %}
@@ -47,7 +45,6 @@ test:
     - pyarrow
     - pytest
     - pandas
-    - dataclasses  # [py == 36]
     - psutil
   imports:
     - tiledb
