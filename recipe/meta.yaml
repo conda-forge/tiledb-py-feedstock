@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win32]
   skip: true  # [win and py2k]
 requirements:
@@ -32,7 +32,7 @@ requirements:
     - cython <3.0
     - numpy
     - pybind11 <2.11
-    - tiledb >=2.18.0,<2.19
+    - tiledb >=2.19.0,<2.20
   run:
     - python
     - {{ pin_compatible('numpy') }}
