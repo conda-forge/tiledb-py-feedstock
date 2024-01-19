@@ -73,7 +73,7 @@ about:
 
 extra:
   recipe-maintainers:
-    - stavrospapadopoulos
-    - shelnutt2
     - ihnorton
+    - jdblischak
+    - shelnutt2
     - nguyenv
