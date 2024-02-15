@@ -32,7 +32,7 @@ requirements:
     - cython <3.0
     - numpy
     - pybind11 <2.11
-    - tiledb >=2.19.0,<2.20
+    - tiledb >=2.20.0,<2.21
   run:
     - python
     - {{ pin_compatible('numpy') }}
