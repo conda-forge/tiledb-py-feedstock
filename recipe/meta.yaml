@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win32]
   skip: true  # [win and py2k]
 requirements:
@@ -22,7 +22,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython <3.0                            # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
-    - pybind11 <2.11                         # [build_platform != target_platform]
+    - pybind11                               # [build_platform != target_platform]
   host:
     - pip
     - wheel
@@ -31,7 +31,7 @@ requirements:
     - python
     - cython <3.0
     - numpy
-    - pybind11 <2.11
+    - pybind11
     - tiledb >=2.20.0,<2.21
   run:
     - python
