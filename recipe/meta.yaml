@@ -1,6 +1,6 @@
 {% set name = "tiledb" %}
-{% set version = "0.26.4" %}
-{% set sha256 = "06d617c90b11277e04c5ed8de905ba898e0344760c7f88773001e5d88dc4a39e" %}
+{% set version = "0.27.0" %}
+{% set sha256 = "cb74f579242628ec782aed4547a736c977d41e004f26e1ff4c3fba83e716ca9d" %}
 
 package:
   name: tiledb-py
@@ -32,7 +32,7 @@ requirements:
     - cython <3.0
     - numpy
     - pybind11
-    - tiledb >=2.20.0,<2.21
+    - tiledb >=2.21.0,<2.22
   run:
     - python
     - {{ pin_compatible('numpy') }}
