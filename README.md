@@ -343,6 +343,7 @@ Feedstock Maintainers
 
 * [@ihnorton](https://github.com/ihnorton/)
 * [@jdblischak](https://github.com/jdblischak/)
+* [@johnkerl](https://github.com/johnkerl/)
 * [@nguyenv](https://github.com/nguyenv/)
 * [@shelnutt2](https://github.com/shelnutt2/)
 
