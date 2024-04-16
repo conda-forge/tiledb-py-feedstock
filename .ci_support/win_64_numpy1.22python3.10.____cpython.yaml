@@ -1,3 +1,5 @@
+c_stdlib:
+- vs
 channel_sources:
 - conda-forge
 channel_targets:
@@ -17,7 +19,7 @@ python_impl:
 target_platform:
 - win-64
 tiledb:
-- '2.20'
+- '2.21'
 zip_keys:
 - - python
   - numpy
