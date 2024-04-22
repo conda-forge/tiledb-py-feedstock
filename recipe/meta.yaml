@@ -11,12 +11,10 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
-# [win32]
-# [win and py2k]
 build:
   number: 0
-  skip: true
-  skip: true
+  skip: true  # [win32]
+  skip: true  # [win and py2k]
 requirements:
   build:
     - {{ compiler('cxx') }}
