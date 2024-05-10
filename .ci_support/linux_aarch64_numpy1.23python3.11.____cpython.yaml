@@ -1,9 +1,5 @@
 BUILD:
 - aarch64-conda_cos7-linux-gnu
-c_stdlib:
-- sysroot
-c_stdlib_version:
-- '2.17'
 cdt_arch:
 - aarch64
 cdt_name:
@@ -31,10 +27,8 @@ python_impl:
 target_platform:
 - linux-aarch64
 tiledb:
-- '2.21'
+- '2.22'
 zip_keys:
-- - c_stdlib_version
-  - cdt_name
 - - python
   - numpy
   - python_impl
