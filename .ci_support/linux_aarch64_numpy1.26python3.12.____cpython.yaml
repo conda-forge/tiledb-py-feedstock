@@ -31,7 +31,7 @@ python_impl:
 target_platform:
 - linux-aarch64
 tiledb:
-- '2.22'
+- '2.24'
 zip_keys:
 - - c_stdlib_version
   - cdt_name
