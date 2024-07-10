@@ -29,6 +29,7 @@ requirements:
     - wheel
     - setuptools
     - setuptools_scm
+    - scikit-build-core
     - python
     - cython <3.0
     - numpy
