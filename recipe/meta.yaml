@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  git_rev: db/scikit-build-core
+  git_url: https://github.com/TileDB-Inc/TileDB-Py.git
 
 build:
+  script: TILEDB_PATH=${PREFIX} {{ PYTHON }} -m pip install --no-build-isolation --no-deps --ignore-installed -v .
   number: 0
   skip: true  # [win32]
   skip: true  # [win and py2k]
