@@ -12,6 +12,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
+  script: TILEDB_PATH=${PREFIX} {{ PYTHON }} -m pip install --no-build-isolation --no-deps --ignore-installed -v . # [not win]
+  script: set "TILEDB_PATH=${PREFIX}" && {{ PYTHON }} -m pip install --no-build-isolation --no-deps --ignore-installed -v . # [win]
   number: 0
   skip: true  # [win32]
   skip: true  # [win and py2k]
@@ -24,11 +26,14 @@ requirements:
     - cython <3.0                            # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - pybind11                               # [build_platform != target_platform]
+    - cmake
+    - make
   host:
     - pip
     - wheel
     - setuptools
     - setuptools_scm
+    - scikit-build-core
     - python
     - cython <3.0
     - numpy
