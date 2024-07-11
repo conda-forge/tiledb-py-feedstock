@@ -11,7 +11,8 @@ source:
   git_url: https://github.com/TileDB-Inc/TileDB-Py.git
 
 build:
-  script: TILEDB_PATH=${PREFIX} {{ PYTHON }} -m pip install --no-build-isolation --no-deps --ignore-installed -v .
+  script: TILEDB_PATH=${PREFIX} {{ PYTHON }} -m pip install --no-build-isolation --no-deps --ignore-installed -v . # [!win]
+  script: set "TILEDB_PATH=${PREFIX}" && {{ PYTHON }} -m pip install --no-build-isolation --no-deps --ignore-installed -v . # [win]
   number: 0
   skip: true  # [win32]
   skip: true  # [win and py2k]
