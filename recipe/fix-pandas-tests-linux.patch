@@ -1,0 +1,13 @@
+diff --git a/tiledb/tests/test_pandas_dataframe.py b/tiledb/tests/test_pandas_dataframe.py
+index 50c5a67..a32cec5 100644
+--- a/tiledb-0.31.0/tiledb/tests/test_pandas_dataframe.py
++++ b/tiledb-0.31.0/tiledb/tests/test_pandas_dataframe.py
+@@ -29,6 +29,8 @@ from .datatypes import RaggedDtype
+ if not has_pandas():
+     pytest.skip("pandas>=1.0,<3.0 not installed", allow_module_level=True)
+
++import pandas as pd
++tm = pd._testing
+
+ def make_dataframe_basic1(col_size=10):
+     # ensure no duplicates when using as string dim
