@@ -60,7 +60,8 @@ test:
   imports:
     - tiledb
   source_files:
-    - tiledb/tests/
+    - tiledb/tests/  # [osx]
+    - tiledb-{{ version }}/tiledb/tests/  # [not osx]
   commands:
     - python -c "import tiledb; tiledb.libtiledb.version()"
     - python -c "import tiledb; assert tiledb.VFS().supports('s3')"
