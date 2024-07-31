@@ -35,7 +35,7 @@ requirements:
     - setuptools_scm
     - scikit-build-core
     - python
-    - cython <3.0
+    - cython
     - numpy
     - pybind11
     - tiledb >=2.25.0,<2.26
