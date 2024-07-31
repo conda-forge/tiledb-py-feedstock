@@ -55,8 +55,7 @@ test:
   imports:
     - tiledb
   source_files:
-    - tiledb/tests/  # [osx]
-    - tiledb-{{ version }}/tiledb/tests/  # [not osx]
+    - tiledb/tests/
   commands:
     - python -c "import tiledb; tiledb.libtiledb.version()"
     - python -c "import tiledb; assert tiledb.VFS().supports('s3')"
@@ -67,8 +66,7 @@ about:
   home: http://tiledb.io
   license: MIT
   license_family: MIT
-  license_file: LICENSE  # [osx]
-  license_file: tiledb-{{ version }}/LICENSE  # [not osx]
+  license_file: LICENSE
   summary: Python interface to the TileDB sparse and dense multi-dimensional array storage manager
   description: |
     TileDB-Py is the python interface to the TileDB array storage manager.
