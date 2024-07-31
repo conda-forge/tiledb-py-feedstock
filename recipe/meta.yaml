@@ -14,7 +14,7 @@ source:
 build:
   script: TILEDB_PATH=${PREFIX} {{ PYTHON }} -m pip install --no-build-isolation --no-deps --ignore-installed -v .  # [not win]
   script: set "TILEDB_PATH=%LIBRARY_PREFIX%" && {{ PYTHON }} -m pip install --no-build-isolation --no-deps --ignore-installed -v .  # [win]
-  number: 0
+  number: 1
   skip: true  # [win32]
   skip: true  # [win and py2k]
 requirements:
