@@ -23,7 +23,7 @@ requirements:
     - {{ stdlib("c") }}
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cython > 3.0                           # [build_platform != target_platform]
+    - cython >3.0                            # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - pybind11                               # [build_platform != target_platform]
     - cmake
@@ -35,7 +35,7 @@ requirements:
     - setuptools_scm
     - scikit-build-core
     - python
-    - cython > 3.0
+    - cython >3.0
     - numpy
     - pybind11
     - tiledb >=2.25.0,<2.26
