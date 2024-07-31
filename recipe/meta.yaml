@@ -12,6 +12,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
+  script: TILEDB_PATH=${PREFIX} {{ PYTHON }} -m pip install --no-build-isolation --no-deps --ignore-installed -v .  # [not win]
+  script: set "TILEDB_PATH=%LIBRARY_PREFIX%" && {{ PYTHON }} -m pip install --no-build-isolation --no-deps --ignore-installed -v .  # [win]
   number: 0
   skip: true  # [win32]
   skip: true  # [win and py2k]
@@ -24,16 +26,19 @@ requirements:
     - cython <3.0                            # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - pybind11                               # [build_platform != target_platform]
+    - cmake
+    - make
   host:
     - pip
     - wheel
     - setuptools
     - setuptools_scm
+    - scikit-build-core
     - python
     - cython <3.0
     - numpy
     - pybind11
-    - tiledb >=2.24.0,<2.25
+    - tiledb >=2.25.0,<2.26
   run:
     - python
     - {{ pin_compatible('numpy') }}
@@ -50,7 +55,8 @@ test:
   imports:
     - tiledb
   source_files:
-    - tiledb/tests/
+    - tiledb/tests/  # [osx]
+    - tiledb-{{ version }}/tiledb/tests/  # [not osx]
   commands:
     - python -c "import tiledb; tiledb.libtiledb.version()"
     - python -c "import tiledb; assert tiledb.VFS().supports('s3')"
@@ -61,7 +67,8 @@ about:
   home: http://tiledb.io
   license: MIT
   license_family: MIT
-  license_file: LICENSE
+  license_file: LICENSE  # [osx]
+  license_file: tiledb-{{ version }}/LICENSE  # [not osx]
   summary: Python interface to the TileDB sparse and dense multi-dimensional array storage manager
   description: |
     TileDB-Py is the python interface to the TileDB array storage manager.
