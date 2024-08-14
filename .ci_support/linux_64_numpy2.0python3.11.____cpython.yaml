@@ -15,7 +15,7 @@ cxx_compiler_version:
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 numpy:
-- '1.23'
+- '2.0'
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -27,7 +27,7 @@ python_impl:
 target_platform:
 - linux-64
 tiledb:
-- '2.24'
+- '2.25'
 zip_keys:
 - - c_stdlib_version
   - cdt_name
