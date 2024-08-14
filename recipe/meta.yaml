@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
 requirements:
   build:
     - {{ compiler('cxx') }}
@@ -37,7 +37,6 @@ requirements:
     - tiledb >=2.25.0,<2.26
   run:
     - python
-    - {{ pin_compatible('numpy') }}
     - packaging
 
 {% if python_impl != 'pypy' %}
