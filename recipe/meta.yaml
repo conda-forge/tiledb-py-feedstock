@@ -37,7 +37,6 @@ requirements:
     - tiledb >=2.26.0,<2.27
   run:
     - python
-    - {{ pin_compatible('numpy') }}
     - packaging
 
 {% if python_impl != 'pypy' %}
