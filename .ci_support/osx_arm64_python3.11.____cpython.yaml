@@ -13,23 +13,23 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '16'
+- '17'
 macos_machine:
 - arm64-apple-darwin20.0.0
 numpy:
-- '1.26'
+- '2.0'
 pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.12.* *_cpython
+- 3.11.* *_cpython
 python_impl:
 - cpython
 target_platform:
 - osx-arm64
 tiledb:
-- '2.24'
+- '2.25'
 zip_keys:
 - - python
   - numpy
