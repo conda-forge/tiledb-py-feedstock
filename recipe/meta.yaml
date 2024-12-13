@@ -34,7 +34,7 @@ requirements:
     - cython >=3.0
     - numpy
     - pybind11
-    - tiledb >=2.26.0,<2.27
+    - tiledb >=2.27.0,<2.28
   run:
     - python
     - packaging
