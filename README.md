@@ -349,6 +349,3 @@ Feedstock Maintainers
 * [@nguyenv](https://github.com/nguyenv/)
 * [@shelnutt2](https://github.com/shelnutt2/)
 
-
-<!-- dummy commit to enable rerendering -->
-
