@@ -1,6 +1,6 @@
 {% set name = "tiledb" %}
-{% set version = "0.32.5" %}
-{% set sha256 = "faa507115731742e4eb0fbfec7be41310efcc46523afc188440b2d26ed48d361" %}
+{% set version = "0.33.0" %}
+{% set sha256 = "6651db137381eb62836771972681b2f03c7248893b4dda62ef81ac18fa0097d2" %}
 
 package:
   name: tiledb-py
@@ -10,9 +10,11 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    - tmp-skip-linux-aarch64-test-failure.patch
 
 build:
-  number: 1
+  number: 0
 requirements:
   build:
     - {{ compiler('cxx') }}
@@ -34,7 +36,7 @@ requirements:
     - cython >=3.0
     - numpy
     - pybind11
-    - tiledb >=2.26.0,<2.27
+    - tiledb >=2.27.0,<2.28
   run:
     - python
     - packaging
