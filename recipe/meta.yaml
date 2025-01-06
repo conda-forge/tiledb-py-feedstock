@@ -1,6 +1,6 @@
 {% set name = "tiledb" %}
-{% set version = "0.33.1" %}
-{% set sha256 = "512fcf2442a8afa8d960d0b843c73e9ec8a87d257d6782389ca31078eb508ee0" %}
+{% set version = "0.33.2" %}
+{% set sha256 = "25d8215bfd6053095d8fa13217bcaf6ebf395b08641f1b2a80419485739d3e9e" %}
 
 package:
   name: tiledb-py
@@ -10,8 +10,6 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - tmp-skip-linux-aarch64-test-failure.patch
 
 build:
   number: 0
