@@ -56,7 +56,7 @@ test:
 {% endif %}
 
 about:
-  home: http://tiledb.io
+  home: http://tiledb.com
   license: MIT
   license_family: MIT
   license_file: LICENSE
@@ -67,7 +67,7 @@ about:
     a novel on-disk format that can store dense and sparse array data with
     support for fast reads and updates and reads. It features excellent compression, and an efficient
     parallel I/O system with high scalability.
-  doc_url: https://api-reference.tiledb.io/python-api.html
+  doc_url: https://tiledb-inc-tiledb.readthedocs-hosted.com/projects/tiledb-py/en/stable/python-api.html
   dev_url: https://github.com/TileDB-Inc/TileDB-Py
 
 extra:
