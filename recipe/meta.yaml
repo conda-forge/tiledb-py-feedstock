@@ -10,6 +10,10 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    # Patch can be removed on first release post 0.34.0
+    # https://github.com/TileDB-Inc/TileDB-Py/pull/2200
+    - remove-classmethod-decorator.patch
 
 build:
   number: 2
