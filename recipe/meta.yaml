@@ -1,6 +1,6 @@
 {% set name = "tiledb" %}
-{% set version = "0.34.0" %}
-{% set sha256 = "ce4995f7455bebfa651fa45a795b07e8bc79867a6feb9b8523c8066ac817e44c" %}
+{% set version = "0.34.1" %}
+{% set sha256 = "ece9453c33a9d3139ba7bb19027f5e9b77d759dd2eda74cf6df117e8011b4367" %}
 
 package:
   name: tiledb-py
@@ -10,9 +10,12 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    # Skip test that only fails on linux-ppc64le with py310
+    - delete-test-array.patch  # [ppc64le and py==310]
 
 build:
-  number: 1
+  number: 0
 requirements:
   build:
     - {{ compiler('cxx') }}
@@ -20,7 +23,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
-    - pybind11                               # [build_platform != target_platform]
+    - pybind11 <3                            # [build_platform != target_platform]
     - cmake
     - make
   host:
@@ -31,7 +34,7 @@ requirements:
     - scikit-build-core
     - python
     - numpy
-    - pybind11
+    - pybind11 <3
     - tiledb >=2.28.0,<2.29
   run:
     - python
@@ -72,10 +75,7 @@ about:
 
 extra:
   recipe-maintainers:
-    - dudoslav
     - ihnorton
     - jdblischak
     - shelnutt2
-    - nguyenv
-    - johnkerl
     - kounelisagis
