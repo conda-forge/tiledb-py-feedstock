@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
   patches:
     # Skip test that only fails on linux-ppc64le with py310
-    - delete-test-array.patch  # [ppc64le and py==310]
+    - delete-test-array.patch  # [ppc64le and (py==39 or py==310)]
 
 build:
   number: 0
