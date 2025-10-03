@@ -15,7 +15,7 @@ source:
     - delete-test-array.patch  # [ppc64le and (py==39 or py==310)]
 
 build:
-  number: 0
+  number: 1
 requirements:
   build:
     - {{ compiler('cxx') }}
