@@ -11,8 +11,8 @@ source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
-    # Skip test that only fails on linux-ppc64le with py310
-    - delete-test-array.patch  # [ppc64le and (py==39 or py==310)]
+    # Update test to accommodate py314 until it is incorporated upstream
+    # https://github.com/TileDB-Inc/TileDB-Py/pull/2256
     - datetime64-error-message.patch
 
 build:
@@ -24,7 +24,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
-    - pybind11 <3                            # [build_platform != target_platform]
+    - pybind11                               # [build_platform != target_platform]
     - cmake
     - make
   host:
@@ -35,7 +35,7 @@ requirements:
     - scikit-build-core
     - python
     - numpy
-    - pybind11 <3
+    - pybind11
     - tiledb >=2.29.0,<2.30
   run:
     - python
