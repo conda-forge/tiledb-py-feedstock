@@ -30,6 +30,3 @@ target_platform:
 - osx-arm64
 tiledb:
 - '2.28'
-zip_keys:
-- - python
-  - channel_sources
