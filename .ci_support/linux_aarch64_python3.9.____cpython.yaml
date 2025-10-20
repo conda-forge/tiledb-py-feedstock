@@ -25,4 +25,4 @@ python_impl:
 target_platform:
 - linux-aarch64
 tiledb:
-- '2.28'
+- '2.29'
