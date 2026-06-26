@@ -40,7 +40,6 @@ requirements:
     - numpy <2.5
     - pandas <3
 
-{% if python_impl != 'pypy' %}
 test:
   requires:
     - hypothesis
@@ -56,7 +55,6 @@ test:
     - python -c "import tiledb; tiledb.libtiledb.version()"
     - python -c "import tiledb; assert tiledb.VFS().supports('s3')"
     - pytest -v --ignore-glob='*_examples.py' --ignore-glob='*_dask.py'
-{% endif %}
 
 about:
   home: http://tiledb.com
