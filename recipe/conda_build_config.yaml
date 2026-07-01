@@ -1,16 +1,16 @@
 channel_priority:
   - strict
 
-# Required to continue building python 3.9
-python:
-  - 3.9.* *_cpython
-  - 3.10.* *_cpython
-  - 3.11.* *_cpython
-  - 3.12.* *_cpython
-  - 3.13.* *_cp313
-is_python_min:
-  - true
-  - false
-  - false
-  - false
-  - false
+# Required to continue building python 3.9 for linux-64
+python:               # [linux and x86_64]
+  - 3.9.* *_cpython   # [linux and x86_64]
+  - 3.10.* *_cpython  # [linux and x86_64]
+  - 3.11.* *_cpython  # [linux and x86_64]
+  - 3.12.* *_cpython  # [linux and x86_64]
+  - 3.13.* *_cp313    # [linux and x86_64]
+is_python_min:        # [linux and x86_64]
+  - true              # [linux and x86_64]
+  - false             # [linux and x86_64]
+  - false             # [linux and x86_64]
+  - false             # [linux and x86_64]
+  - false             # [linux and x86_64]
