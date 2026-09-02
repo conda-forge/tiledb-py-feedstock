@@ -72,7 +72,5 @@ about:
 
 extra:
   recipe-maintainers:
-    - dudoslav
     - jdblischak
-    - johnkerl
     - kounelisagis
