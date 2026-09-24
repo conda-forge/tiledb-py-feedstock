@@ -1,6 +1,6 @@
 {% set name = "tiledb" %}
-{% set version = "0.33.2" %}
-{% set sha256 = "25d8215bfd6053095d8fa13217bcaf6ebf395b08641f1b2a80419485739d3e9e" %}
+{% set version = "0.36.1" %}
+{% set sha256 = "f7e1088e277efb8bf868842698b7c2e0c5cc4ad9bb24eb0efd6bb1a499832f40" %}
 
 package:
   name: tiledb-py
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
 requirements:
   build:
     - {{ compiler('cxx') }}
@@ -32,12 +32,14 @@ requirements:
     - python
     - numpy
     - pybind11
-    - tiledb >=2.27.0,<2.28
+    - tiledb >=2.30.0,<2.31
   run:
     - python
     - packaging
+  run_constrained:
+    - numpy <2.5
+    - pandas <3
 
-{% if python_impl != 'pypy' %}
 test:
   requires:
     - hypothesis
@@ -53,10 +55,9 @@ test:
     - python -c "import tiledb; tiledb.libtiledb.version()"
     - python -c "import tiledb; assert tiledb.VFS().supports('s3')"
     - pytest -v --ignore-glob='*_examples.py' --ignore-glob='*_dask.py'
-{% endif %}
 
 about:
-  home: http://tiledb.io
+  home: http://tiledb.com
   license: MIT
   license_family: MIT
   license_file: LICENSE
@@ -67,7 +68,7 @@ about:
     a novel on-disk format that can store dense and sparse array data with
     support for fast reads and updates and reads. It features excellent compression, and an efficient
     parallel I/O system with high scalability.
-  doc_url: https://api-reference.tiledb.io/python-api.html
+  doc_url: https://tiledb-inc-tiledb.readthedocs-hosted.com/projects/tiledb-py/en/stable/python-api.html
   dev_url: https://github.com/TileDB-Inc/TileDB-Py
 
 extra:
