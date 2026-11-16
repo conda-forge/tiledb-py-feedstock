@@ -349,5 +349,5 @@ Feedstock Maintainers
 =====================
 
 * [@jdblischak](https://github.com/jdblischak/)
-* [@kounelisagis](https://github.com/kounelisagis/)
+* [@teo-tsirpanis](https://github.com/teo-tsirpanis/)
 
